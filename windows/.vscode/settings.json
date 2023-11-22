@@ -1,0 +1,26 @@
+{
+    "clangd.arguments": [
+        // "--query-driver=C:/msys64/ucrt64/bin/g++.exe",
+        //指定配置文件compelie_commands.json所在目录，这里有三种方法生成
+        "--compile-commands-dir=build",
+        // 在后台自动分析文件（基于complie_commands)
+        "--background-index",
+        // 全局补全（会自动补充头文件）
+        "--all-scopes-completion",
+        // 更详细的补全内容
+        "--completion-style=detailed",
+        "--function-arg-placeholders",
+        // 补充头文件的形式
+        "--header-insertion=iwyu",
+        // pch优化的位置
+        "--pch-storage=disk",
+        "--log=verbose",
+        "--clang-tidy"
+    ],
+    "editor.mouseWheelZoom": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.links": false,
+    "files.autoSave": "afterDelay",
+}
